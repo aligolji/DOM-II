@@ -1,45 +1,50 @@
 // Your code goes here
 
-//1 - keydown   /   keyup
-let logoHeading = document.querySelector('.logo-heading');
-logoHeading.addEventListener = ('keydown', () => {
-    logoHeading.style.letterSpacing = '10px';
-    logoHeading.style.color = 'red';
-    event.stopPropagation ();
-});
-logoHeading.addEventListener = ('keyup', () => {
-    logoHeading.style.letterSpacing = '';
+//1/2 - keydown   /   keyup
+let logo = document.querySelector('.logo-heading');
+window.addEventListener('keydown', () => {
+    logo.style.letterSpacing = '15px';
 });
 
-console.log(logoHeading);
+window.addEventListener('keyup', () => {
+    alert('You just keyed the bus!!🚌');
+});
+
+//keypress syntax
+// window.addEventListener('keydown', keyPress, false);
+// function keyPress(enterKey) {
+//     if (enterKey.keyCode == '13') {
+//         alert('You just ENTERed!');
+//     }
+// }
 
 
-//2 - copy
+//3 - copy - NEEDS WORK - NOT FUNCTIONING
 let intro = document.querySelector('.intro');
-intro.addEventListener = ('copy', () => {
+intro.addEventListener('copy', () => {
     // intro.style.backgroundColor = '#E68A00';
     alert('The text is on the bus.🚌');
 });
-console.log(intro);
 
 
 
-// 3 - mousedown    /   mouseup
+// 4/5 - mousedown    /   mouseup
 let homeLink = document.querySelector('.nav-link');
 homeLink.addEventListener('mousedown', () => {
     homeLink.style.color = 'yellow';
     homeLink.style.backgroundColor = 'black';
+    homeLink.style.fontSize = '25px';
 });
 homeLink.addEventListener('mouseup', () => {
     homeLink.style.color = '';
     homeLink.style.backgroundColor = '';
+    homeLink.style.fontSize = '';
 });
 
-console.log(homeLink);
 
 
 
-//4 - dblclick
+//6 - dblclick
 let busPic = document.querySelector('.intro img');
 busPic.addEventListener('dblclick', () => {
     alert("The wheels on the bus go round and round... Now you can't get it out of your head!");
@@ -48,18 +53,17 @@ busPic.addEventListener('dblclick', () => {
 
 
 
-//5 - mouseover / mouseout
+//7/8 - mouseover / mouseout
 busPic.addEventListener('mouseover', () => {
     busPic.style.filter = 'grayscale(100%)';
 });
 busPic.addEventListener('mouseout', () => {
     busPic.style.transform = 'scaleX(-1)';
 });
-console.log(busPic);
 
 
 
-//6 - drag  /   dragend
+//9/10 - drag  /   dragend
 let contentSection = document.querySelector('.content-section');
 contentSection.addEventListener('drag', () => {
     contentSection.style.backgroundColor = 'blue';
@@ -69,10 +73,16 @@ contentSection.addEventListener('dragend', () => {
     contentSection.style.backgroundColor = '#E68A00';
 });
 
-console.log(contentSection);
 
 
 //7
+let advAwaits = document.querySelectorAll('.content-section');
+    // advAwaits.addEventListener('click', () => {
+
+    // });
+
+console.log(advAwaits[1]);
+
 
 
 
