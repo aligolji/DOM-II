@@ -73,3 +73,12 @@ console.log(contentSection);
 
 
 //7
+
+
+
+//preventDefault
+
+let nav = document.querySelector('.nav');
+nav.addEventListener('click', () => {
+    event.preventDefault();
+});
